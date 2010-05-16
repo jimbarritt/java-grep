@@ -1,4 +1,4 @@
-package com.jimbarritt.grep;
+package org.ixcode.grep;
 
 import java.io.*;
 import java.nio.*;
