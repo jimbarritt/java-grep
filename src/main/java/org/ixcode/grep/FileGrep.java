@@ -11,7 +11,7 @@ public class FileGrep {
     private static Charset charset = Charset.forName("UTF-8");
     private static CharsetDecoder decoder = charset.newDecoder();
 
-    private static Pattern linePattern = Pattern.compile(".*\r?\n");
+    private static final Pattern LINE_PATTERN = Pattern.compile(".*\r?\n");
 
     private static Pattern pattern;
 
@@ -25,7 +25,7 @@ public class FileGrep {
     }
 
     private static void grep(File inputFile, CharBuffer cb) {
-        Matcher lm = linePattern.matcher(cb);
+        Matcher lm = LINE_PATTERN.matcher(cb);
         Matcher pm = null;
         int lines = 0;
         while (lm.find()) {
