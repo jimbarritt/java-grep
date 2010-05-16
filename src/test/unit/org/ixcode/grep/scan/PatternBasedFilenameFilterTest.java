@@ -7,11 +7,11 @@ import java.io.*;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class RegexFilenameFilterTest {
+public class PatternBasedFilenameFilterTest {
 
     @Test
     public void matchesAFilenameByRegex() {
-        FilenameFilter filter = new RegexFilenameFilter(".*\\.txt");
+        FilenameFilter filter = new PatternBasedFilenameFilter("*.txt");
 
         assertThat(filter.accept(null, "john.txt"), is(true));
         assertThat(filter.accept(null, "john.java"), is(false));

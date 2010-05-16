@@ -3,11 +3,12 @@ package org.ixcode.grep.scan;
 import java.io.*;
 import java.util.regex.*;
 
-public class RegexFilenameFilter implements FilenameFilter {
+public class PatternBasedFilenameFilter implements FilenameFilter {
     private Pattern pattern;
 
-    public RegexFilenameFilter(String regularExpression) {
-       this.pattern = Pattern.compile(regularExpression);              
+    public PatternBasedFilenameFilter(String filenamePattern) {
+       String regex = ".*\\.txt";
+       this.pattern = Pattern.compile(regex);              
     }
 
     @Override
