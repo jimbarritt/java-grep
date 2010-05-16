@@ -10,7 +10,11 @@ public class FilenamePattern {
         pattern = Pattern.compile(regex);
     }
 
-    public Matcher matcher(String input) {
-        return pattern.matcher(input);
+    public boolean matches(String input) {
+        return pattern.matcher(input).matches();        
+    }
+
+    public String toString() {
+        return pattern.pattern();
     }
 }

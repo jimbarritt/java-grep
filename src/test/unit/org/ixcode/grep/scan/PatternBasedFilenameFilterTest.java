@@ -1,21 +1,39 @@
 package org.ixcode.grep.scan;
 
 import org.junit.*;
+import org.mockito.Mock;
 
 import java.io.*;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.*;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.*;
 
 public class PatternBasedFilenameFilterTest {
+    @Mock private FilenamePattern filenamePattern;
+
+
+    @Before
+    public void setup() {
+        initMocks(this);
+    }
 
     @Test
-    public void matchesAFilenameByRegex() {
-        FilenameFilter filter = new PatternBasedFilenameFilter(new FilenamePattern("*.txt"));
+    public void acceptsAMatchingFile() {
+        when(filenamePattern.matches("foobar")).thenReturn(true);
 
-        assertThat(filter.accept(null, "john.txt"), is(true));
-        assertThat(filter.accept(null, "john.java"), is(false));
-        assertThat(filter.accept(null, "john"), is(false));
-        assertThat(filter.accept(null, "john.foo"), is(false));
+        FilenameFilter filter = new PatternBasedFilenameFilter(filenamePattern);
+
+        assertThat(filter.accept(null, "foobar"), is(true));
+    }
+
+    @Test
+    public void doesNotAcceptAFileThatDoesNotMatch() {
+        when(filenamePattern.matches("foobar")).thenReturn(false);
+
+        FilenameFilter filter = new PatternBasedFilenameFilter(filenamePattern);
+
+        assertThat(filter.accept(null, "foobar"), is(false));
     }
 }

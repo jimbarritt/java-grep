@@ -11,6 +11,6 @@ public class PatternBasedFilenameFilter implements FilenameFilter {
 
     @Override
     public boolean accept(File dir, String name) {
-        return pattern.matcher(name).matches();
+        return pattern.matches(name);
     }
 }
