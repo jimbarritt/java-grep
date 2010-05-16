@@ -9,8 +9,7 @@ import static org.junit.Assert.assertThat;
 
 public class FilenamePatternTest {
 
-
-    @Test
+  @Test
     public void constructsAppropriateRegex() {
         FilenamePattern filenamePattern = new FilenamePattern("*.java");
 
