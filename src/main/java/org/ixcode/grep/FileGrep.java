@@ -6,7 +6,7 @@ import java.nio.channels.*;
 import java.nio.charset.*;
 import java.util.regex.*;
 
-public class Grep {
+public class FileGrep {
 
     private static Charset charset = Charset.forName("UTF-8");
     private static CharsetDecoder decoder = charset.newDecoder();
@@ -47,21 +47,23 @@ public class Grep {
 
     private static void grep(File inputFile) throws IOException {
         FileInputStream fis = new FileInputStream(inputFile);
-        FileChannel fc = fis.getChannel();
+        FileChannel channel = fis.getChannel();
 
-        int sz = (int) fc.size();
-        MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, sz);
+        try {
+            int sz = (int) channel.size();
+            MappedByteBuffer bb = channel.map(FileChannel.MapMode.READ_ONLY, 0, sz);
 
-        CharBuffer cb = decoder.decode(bb);
+            CharBuffer cb = decoder.decode(bb);
 
-        grep(inputFile, cb);
-
-        fc.close();
+            grep(inputFile, cb);
+        } finally {
+            channel.close();
+        }
     }
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.err.println("Usage: java Grep pattern file...");
+            System.err.println("Usage: java FileGrep pattern file...");
             return;
         }
         compile(args[0]);
