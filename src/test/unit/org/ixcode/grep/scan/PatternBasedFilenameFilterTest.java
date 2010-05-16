@@ -11,7 +11,7 @@ public class PatternBasedFilenameFilterTest {
 
     @Test
     public void matchesAFilenameByRegex() {
-        FilenameFilter filter = new PatternBasedFilenameFilter("*.txt");
+        FilenameFilter filter = new PatternBasedFilenameFilter(new FilenamePattern("*.txt"));
 
         assertThat(filter.accept(null, "john.txt"), is(true));
         assertThat(filter.accept(null, "john.java"), is(false));

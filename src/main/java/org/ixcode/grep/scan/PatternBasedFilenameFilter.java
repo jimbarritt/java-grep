@@ -1,14 +1,12 @@
 package org.ixcode.grep.scan;
 
 import java.io.*;
-import java.util.regex.*;
 
 public class PatternBasedFilenameFilter implements FilenameFilter {
-    private Pattern pattern;
+    private FilenamePattern pattern;
 
-    public PatternBasedFilenameFilter(String filenamePattern) {
-       String regex = ".*\\.txt";
-       this.pattern = Pattern.compile(regex);              
+    public PatternBasedFilenameFilter(FilenamePattern pattern) {
+        this.pattern = pattern;
     }
 
     @Override
