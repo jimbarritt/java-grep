@@ -19,7 +19,7 @@ public class CharBufferMatcherTest {
                 "line 3");
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);
-        assertThat(matcherResult.lineCount(), is(3));
+        assertThat(matcherResult.processedLineCount(), is(3));
     }
 
     @Test
@@ -31,7 +31,8 @@ public class CharBufferMatcherTest {
                         "line 3");
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);
-        
+
+        assertThat(matcherResult.matchedLineCount(), is(1));
 
     }
     
