@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class CharBufferMatcherTest {
 
     @Test
-    public void returnsNumberOfLines() throws Exception {
+    public void countsTheNumberOfLines() throws Exception {
         CharBufferMatcher matcher = new CharBufferMatcher();
 
         CharBuffer charBuffer = writeSomeLinesInUtf8("line 1", "line 2", "line 3");
@@ -20,6 +20,8 @@ public class CharBufferMatcherTest {
 
         assertThat(numberOfLines, is(3));
     }
+
+    
 
     private static CharBuffer writeSomeLinesInUtf8(String... lines) throws UnsupportedEncodingException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();

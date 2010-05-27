@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -164,7 +162,7 @@
       <file leaf-file-name="CharBufferMatcherTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="19" selection-start="535" selection-end="535" vertical-scroll-proportion="0.4894068">
+            <state line="23" column="4" selection-start="522" selection-end="522" vertical-scroll-proportion="0.7118644">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -755,7 +753,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got 100% line coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored CharBufferTest to allow lines to be created easily&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -780,6 +778,7 @@
     <MESSAGE value="Added file line scanner" />
     <MESSAGE value="Added osname test" />
     <MESSAGE value="Got 100% line coverage" />
+    <MESSAGE value="Refactored CharBufferTest to allow lines to be created easily&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -874,7 +873,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="535" selection-end="535" vertical-scroll-proportion="0.4894068">
+        <state line="23" column="4" selection-start="522" selection-end="522" vertical-scroll-proportion="0.7118644">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
