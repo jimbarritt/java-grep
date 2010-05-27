@@ -8,40 +8,34 @@ import static org.junit.Assert.*;
 
 public class OperatingSystemNameTest {
 
+    public static final String OS_NAME_SYSTEM_PROPERTY_KEY = "os.name";
+    private String originalOsName;
+
+    @Before
+    public void setUp() {
+        originalOsName = System.getProperty(OS_NAME_SYSTEM_PROPERTY_KEY);
+    }
+
+    @After
+    public void tearDown() {
+        System.setProperty(OS_NAME_SYSTEM_PROPERTY_KEY, originalOsName);
+    }
+
     @Test
-    public void knowsItIsOsx() {
-        System.setProperty("os.name", "Mac OS X");
+    public void knowsItIsOsFromSystemProperty() {
+        System.setProperty(OS_NAME_SYSTEM_PROPERTY_KEY, "Mac OS X");
 
         OperatingSystemName operatingSystemName = currentOperatingSystem();
 
         assertThat(operatingSystemName.is(OSX), is(true));
     }
-
-    @Test
-    public void knowsItIsWindows() {
-        System.setProperty("os.name", "Windows");
-
-        OperatingSystemName operatingSystemName = currentOperatingSystem();
-
-        assertThat(operatingSystemName.is(WINDOWS), is(true));
-    }
-
-
+    
     @Test(expected = IllegalStateException.class)
     public void failsIfOsNameDoesNotExist() {
-        System.setProperty("os.name", "foobar");
+        System.setProperty(OS_NAME_SYSTEM_PROPERTY_KEY, "foobar");
 
         currentOperatingSystem();
-    }
-
-    @Test
-    public void knowsItsWindows() {
-        System.setProperty("os.name", "Windows");
-
-        OperatingSystemName operatingSystemName = currentOperatingSystem();
-
-        assertThat(operatingSystemName.is(WINDOWS), is(true));
-    }
+    }  
 
     @Test
     public void knowsItsName() {

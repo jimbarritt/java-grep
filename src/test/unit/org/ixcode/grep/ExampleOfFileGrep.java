@@ -6,8 +6,8 @@ import java.nio.channels.*;
 import java.nio.charset.*;
 import java.util.regex.*;
 
-public class FileGrep {
-
+public class ExampleOfFileGrep {
+    
     private static Charset charset = Charset.forName("UTF-8");
     private static CharsetDecoder decoder = charset.newDecoder();
 
@@ -63,7 +63,7 @@ public class FileGrep {
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.err.println("Usage: java FileGrep pattern file...");
+            System.err.println("Usage: java ExampleOfFileGrep pattern file...");
             return;
         }
         compile(args[0]);
