@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/FileGrep.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -138,7 +137,7 @@
       <file leaf-file-name="SystemLineSeparatorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="14" column="5" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,20 +152,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperatingSystemNameTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OperatingSystemNameTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="43" selection-start="523" selection-end="523" vertical-scroll-proportion="0.6550308">
+            <state line="20" column="43" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CharBufferMatcherTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CharBufferMatcherTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="19" selection-start="535" selection-end="535" vertical-scroll-proportion="0.4894068">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,12 +204,12 @@
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemName.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystem.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/FileGrep.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/OperatingSystemName.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
       </list>
     </option>
   </component>
@@ -285,24 +286,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="org.ixcode.grep" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.ixcode.grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OperatingSystemNameTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -730,7 +713,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -749,7 +732,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3364486" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3364486" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -772,7 +755,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added osname test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got 100% line coverage" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -796,6 +779,7 @@
     <MESSAGE value="Refactored to get abstraction a bit nicer" />
     <MESSAGE value="Added file line scanner" />
     <MESSAGE value="Added osname test" />
+    <MESSAGE value="Got 100% line coverage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -855,21 +839,6 @@
         <state line="5" column="26" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="25" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
@@ -886,8 +855,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="523" selection-end="523" vertical-scroll-proportion="0.6550308">
+        <state line="20" column="43" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="19" selection-start="535" selection-end="535" vertical-scroll-proportion="0.4894068">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

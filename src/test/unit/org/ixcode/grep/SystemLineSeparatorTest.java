@@ -14,7 +14,6 @@ public class SystemLineSeparatorTest {
     public void setup() {
     }
 
-
     @Test
     public void whatIsTheLineSeparator() {
         String lineSeparator = System.getProperty("line.separator");

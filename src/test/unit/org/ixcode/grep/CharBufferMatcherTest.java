@@ -5,26 +5,33 @@ import org.junit.*;
 import java.io.*;
 import java.nio.*;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.*;
+import static org.junit.Assert.*;
 
 public class CharBufferMatcherTest {
-   
+
     @Test
     public void returnsNumberOfLines() throws Exception {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(out, "UTF-8")));
-        writer.println("line 1");
-        writer.println("line 2");
-        writer.println("line 3");
-
-        writer.flush();
-        writer.close();
-
         CharBufferMatcher matcher = new CharBufferMatcher();
 
-        int numberOfLines = matcher.match(CharBuffer.wrap(out.toString("UTF-8")));
+        CharBuffer charBuffer = writeSomeLinesInUtf8("line 1", "line 2", "line 3");
+
+        int numberOfLines = matcher.match(charBuffer);
 
         assertThat(numberOfLines, is(3));
+    }
+
+    private static CharBuffer writeSomeLinesInUtf8(String... lines) throws UnsupportedEncodingException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        PrintWriter writer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(out, "UTF-8")));
+        try {
+            for (String line : lines) {
+                writer.println(line);
+            }
+            return CharBuffer.wrap(out.toString("UTF-8"));
+        } finally {
+            writer.flush();
+            writer.close();
+        }
     }
 }
