@@ -12,15 +12,28 @@ public class CharBufferMatcherTest {
 
     @Test
     public void countsTheNumberOfLines() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher();
+        CharBufferMatcher matcher = new CharBufferMatcher(".*");
+        CharBuffer someLinesOfText = writeSomeLinesInUtf8(
+                "line 1",
+                "line 2",
+                "line 3");
 
-        CharBuffer charBuffer = writeSomeLinesInUtf8("line 1", "line 2", "line 3");
-
-        int numberOfLines = matcher.match(charBuffer);
-
-        assertThat(numberOfLines, is(3));
+        MatcherResult matcherResult = matcher.match(someLinesOfText);
+        assertThat(matcherResult.lineCount(), is(3));
     }
 
+    @Test
+    public void matchesAPatternInALine() throws Exception {
+        CharBufferMatcher matcher = new CharBufferMatcher(".*foobar\\:.*");
+        CharBuffer someLinesOfText = writeSomeLinesInUtf8(
+                        "line 1",
+                        "some foobar: line 2",
+                        "line 3");
+
+        MatcherResult matcherResult = matcher.match(someLinesOfText);
+        
+
+    }
     
 
     private static CharBuffer writeSomeLinesInUtf8(String... lines) throws UnsupportedEncodingException {
@@ -30,10 +43,10 @@ public class CharBufferMatcherTest {
             for (String line : lines) {
                 writer.println(line);
             }
-            return CharBuffer.wrap(out.toString("UTF-8"));
         } finally {
             writer.flush();
             writer.close();
         }
+        return CharBuffer.wrap(out.toString("UTF-8"));
     }
 }

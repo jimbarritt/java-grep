@@ -5,16 +5,19 @@ import java.util.regex.*;
 
 public class CharBufferMatcher {
     private static final Pattern LINE_PATTERN = Pattern.compile(".*\r?\n");
-    
-    public int match(CharBuffer charBuffer) {
+
+    public CharBufferMatcher(String searchRegEx) {
+    }
+
+    public MatcherResult match(CharBuffer charBuffer) {
         Matcher lm = LINE_PATTERN.matcher(charBuffer);
-        int lines = 0;
+        int lineCount = 0;
         while (lm.find()) {
-            lines++;            
+            lineCount++;
             if (lm.end() == charBuffer.limit()) {
                 break;
             }
         }
-        return lines;
+        return new MatcherResult(lineCount);
     }
 }
