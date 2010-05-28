@@ -1,6 +1,7 @@
 package org.ixcode.grep;
 
 import java.nio.*;
+import java.util.*;
 import java.util.regex.*;
 
 public class CharBufferMatcher {
@@ -15,6 +16,7 @@ public class CharBufferMatcher {
         Matcher lineMatcher = LINE_PATTERN.matcher(charBuffer);
         int processedLineCount = 0;
         int matchedLinesCount = 0;
+        List<MatchedLine> matchedLines = new ArrayList<MatchedLine>();
 
         while (lineMatcher.find()) {
             processedLineCount++;
@@ -23,12 +25,13 @@ public class CharBufferMatcher {
             Matcher searchPatternMatcher = searchPattern.matcher(line);
             if (searchPatternMatcher.find()) {
                 matchedLinesCount++;
+                matchedLines.add(new MatchedLine(line));
             }
 
             if (lineMatcher.end() == charBuffer.limit()) {
                 break;
             }
         }
-        return new MatcherResult(processedLineCount, matchedLinesCount);
+        return new MatcherResult(processedLineCount, matchedLinesCount, matchedLines);
     }
 }
