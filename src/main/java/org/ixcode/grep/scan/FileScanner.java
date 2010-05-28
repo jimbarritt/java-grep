@@ -9,22 +9,17 @@ public class FileScanner {
 
     private static final FileFilter DIRECTORY_FILTER = new DirectoryFilter();
     private final File rootDir;
-    private final String fileType;
+    private final FilenamePattern filenamePattern;
 
-    public FileScanner(File rootDir, String fileType) {
+    public FileScanner(File rootDir, FilenamePattern filenamePattern) {
         this.rootDir = rootDir;                
-        this.fileType = fileType;
+        this.filenamePattern = filenamePattern;
     }
 
     public void scan(FileScanningAction fileScanningAction) {
-        FilenameFilter filter = new FilenameFilter() {
-            @Override
-            public boolean accept(File dir, String name) {
-                return name.endsWith(fileType);
-            }         
-        };
+        PatternBasedFilenameFilter filter = new PatternBasedFilenameFilter(filenamePattern);
 
-        log.debug("Scanning files matching [" + fileType + "] in [" + rootDir.getAbsolutePath() + "]");
+        log.debug("Scanning files matching [" + filenamePattern + "] in [" + rootDir.getAbsolutePath() + "]");
         scanFiles(rootDir, filter, fileScanningAction);
     }
 

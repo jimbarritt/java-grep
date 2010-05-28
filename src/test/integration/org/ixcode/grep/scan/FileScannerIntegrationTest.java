@@ -15,7 +15,7 @@ public class FileScannerIntegrationTest {
 
     @Test
     public void scansTheTestFiles() {
-        FileScanner scanner = new FileScanner(new File("src/test/resource/testfiles"), ".txt");
+        FileScanner scanner = new FileScanner(new File("src/test/resource/testfiles"), new FilenamePattern("*.txt"));
         FileCounter fileCounter = new FileCounter();
         scanner.scan(fileCounter);
 
