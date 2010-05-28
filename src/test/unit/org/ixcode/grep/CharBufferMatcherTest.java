@@ -36,6 +36,7 @@ public class CharBufferMatcherTest {
 
         MatchedLine matchedLine = matcherResult.matchedLines(0);
         assertThat(matchedLine.lineText(), is("some foobar: line 2"));
+        assertThat(matchedLine.lineNumber(), is(2));
     }
 
     @Test

@@ -4,11 +4,13 @@ import java.util.*;
 import java.util.regex.*;
 
 public class MatchedLine {
+    private final int lineNumber;
     private final CharSequence line;
     private List<MatchedGroup> groups;
     private MatchResult matchResult;
 
-    public MatchedLine(CharSequence line, MatchResult matchResult) {
+    public MatchedLine(int lineNumber, CharSequence line, MatchResult matchResult) {
+        this.lineNumber = lineNumber;
         this.line = line;        
         this.groups = extractGroups(matchResult);
         this.matchResult = matchResult;
@@ -37,5 +39,9 @@ public class MatchedLine {
 
     public Integer end() {
         return matchResult.end();
+    }
+
+    public int lineNumber() {
+        return lineNumber;
     }
 }

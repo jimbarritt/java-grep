@@ -25,7 +25,7 @@ public class CharBufferMatcher {
             Matcher searchPatternMatcher = searchPattern.matcher(line);
             if (searchPatternMatcher.find()) {
                 matchedLinesCount++;
-                matchedLines.add(createMatchedLine(line, searchPatternMatcher));
+                matchedLines.add(createMatchedLine(processedLineCount, line, searchPatternMatcher));
             }
 
             if (lineMatcher.end() == charBuffer.limit()) {
@@ -35,7 +35,7 @@ public class CharBufferMatcher {
         return new MatcherResult(processedLineCount, matchedLinesCount, matchedLines);
     }
 
-    private static MatchedLine createMatchedLine(CharSequence line, Matcher searchPatternMatcher) {
-        return new MatchedLine(line, searchPatternMatcher.toMatchResult());
+    private static MatchedLine createMatchedLine(int lineNumber, CharSequence line, Matcher searchPatternMatcher) {
+        return new MatchedLine(lineNumber, line, searchPatternMatcher.toMatchResult());
     }
 }
