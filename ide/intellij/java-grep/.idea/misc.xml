@@ -12,7 +12,7 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="FireworksProject">
-    <option name="expectedTestCaseNameRegex" value="^((?!Integration).)*Test" />
+    <option name="expectedTestCaseNameRegex" value="(.(?!Integration))*Test" />
     <option name="maxMemory" value="" />
     <option name="maxSize" value="50" />
     <option name="enable" value="true" />

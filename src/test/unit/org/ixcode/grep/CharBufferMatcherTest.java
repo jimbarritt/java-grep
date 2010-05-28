@@ -24,7 +24,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void matchesAPatternInALine() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher(".*foobar\\:.*");
+        CharBufferMatcher matcher = new CharBufferMatcher(".*(foobar)\\:.*");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8(
                         "line 1",
                         "some foobar: line 2",
@@ -34,7 +34,8 @@ public class CharBufferMatcherTest {
 
         assertThat(matcherResult.matchedLineCount(), is(1));
         MatchedLine matchedLine = matcherResult.matchedLines(0);
-        assertThat(matchedLine.lineText(), is("some foobar: line 2"));        
+        assertThat(matchedLine.lineText(), is("some foobar: line 2"));
+        assertThat(matchedLine.groups().size(), is(1));
     }
     
 
