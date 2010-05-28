@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatcherResult.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatcherResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -59,10 +57,10 @@
     <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest_failsIfOsNameDoesntExist..es" NAME="OperatingSystemNameTest.failsIfOsNameDoesntExist Coverage Results" MODIFIED="1274977174104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_matchesAPatternInALine..es" NAME="CharBufferMatcherTest.matchesAPatternInALine Coverage Results" MODIFIED="1274988669389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_matchesAPatternInALine..es" NAME="CharBufferMatcherTest.matchesAPatternInALine Coverage Results" MODIFIED="1275034547757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest..es" NAME="OperatingSystemNameTest Coverage Results" MODIFIED="1274980772414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest..es" NAME="OperatingSystemNameTest Coverage Results" MODIFIED="1275034474625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$FileScannerIntegrationTest..es" NAME="FileScannerIntegrationTest Coverage Results" MODIFIED="1274052498173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -139,25 +137,7 @@
       <file leaf-file-name="CharBufferMatcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="84" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Matcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/src.jar!/src/java/util/regex/Matcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="519" column="19" selection-start="18972" selection-end="18972" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExampleOfFileGrep.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+            <state line="23" column="51" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,10 +146,28 @@
       <file leaf-file-name="CharBufferMatcherTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="70" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.8898305">
+            <state line="35" column="99" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.4661017">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperatingSystemNameTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="20" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperatingSystemName.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/OperatingSystemName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="12" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,8 +221,8 @@
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatcherResult.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
       </list>
     </option>
@@ -929,7 +927,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -942,14 +940,14 @@
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3580158" sideWeight="0.6615385" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3364486" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1045,20 +1043,6 @@
         <state line="5" column="26" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/OperatingSystemName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/SystemLineSeparatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="5" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
@@ -1094,16 +1078,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/OperatingSystemNameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/OperatingSystemName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="84" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
+        <state line="23" column="51" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="70" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.8898305">
+        <state line="35" column="99" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.4661017">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

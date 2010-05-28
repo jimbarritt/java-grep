@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class CharBufferMatcher {
-    private static final Pattern LINE_PATTERN = Pattern.compile(".*\r?\n");
+    private static final Pattern LINE_PATTERN = Pattern.compile("(.*)\r?\n");
     private final Pattern searchPattern;
 
     public CharBufferMatcher(String searchExpression) {
@@ -21,7 +21,7 @@ public class CharBufferMatcher {
         while (lineMatcher.find()) {
             processedLineCount++;
 
-            CharSequence line = lineMatcher.group();
+            CharSequence line = lineMatcher.group(1);
             Matcher searchPatternMatcher = searchPattern.matcher(line);
             if (searchPatternMatcher.find()) {
                 matchedLinesCount++;

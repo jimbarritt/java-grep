@@ -33,7 +33,7 @@ public class CharBufferMatcherTest {
         MatcherResult matcherResult = matcher.match(someLinesOfText);
 
         assertThat(matcherResult.matchedLineCount(), is(1));
-        assertThat(matcherResult.matchedLines(0).lineText().toString(), is("some foobar: line 2"));
+        assertThat(matcherResult.matchedLines(0).lineText().toString(), is("some foobar: line 2"));        
     }
     
 
