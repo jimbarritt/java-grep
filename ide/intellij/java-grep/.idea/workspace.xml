@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -32,11 +31,14 @@
     <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest_knowsItIsWindows..es" NAME="OperatingSystemNameTest.knowsItIsWindows Coverage Results" MODIFIED="1274979537399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$org_ixcode_grep_in_java_grep.ic" NAME="org.ixcode.grep in java-grep Coverage Results" MODIFIED="1275045849835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java-grep$org_ixcode_grep_in_java_grep.ic" NAME="org.ixcode.grep in java-grep Coverage Results" MODIFIED="1275048207707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$FileScannerIntegrationTest_scansTheTestFiles.ic" NAME="FileScannerIntegrationTest.scansTheTestFiles Coverage Results" MODIFIED="1275036956317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.scan.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_extractsGroupsFromExpression.ic" NAME="CharBufferMatcherTest.extractsGroupsFromExpression Coverage Results" MODIFIED="1275047916592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$PatternBasedFilenameFilterTest..es" NAME="PatternBasedFilenameFilterTest Coverage Results" MODIFIED="1274041045385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.scan.*</FILTER>
@@ -74,10 +76,10 @@
     <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest_knowsWhatItIsFromTheSystemPropertyOsName..es" NAME="OperatingSystemNameTest.knowsWhatItIsFromTheSystemPropertyOsName Coverage Results" MODIFIED="1274977082314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest.ic" NAME="OperatingSystemNameTest Coverage Results" MODIFIED="1275036395528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_matchesAPatternInALine.ic" NAME="CharBufferMatcherTest.matchesAPatternInALine Coverage Results" MODIFIED="1275048197348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_matchesAPatternInALine.ic" NAME="CharBufferMatcherTest.matchesAPatternInALine Coverage Results" MODIFIED="1275045984488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java-grep$OperatingSystemNameTest.ic" NAME="OperatingSystemNameTest Coverage Results" MODIFIED="1275036395528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$FilenamePatternTest_constructsAppropriateRegex..es" NAME="FilenamePatternTest.constructsAppropriateRegex Coverage Results" MODIFIED="1274040537249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -154,7 +156,7 @@
       <file leaf-file-name="CharBufferMatcherTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="39" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.59737825">
+            <state line="50" column="45" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.5778689">
               <folding />
             </state>
           </provider>
@@ -172,7 +174,7 @@
       <file leaf-file-name="CharBufferMatcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="27" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
+            <state line="38" column="24" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +183,7 @@
       <file leaf-file-name="MatcherResult.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatcherResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="18" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
+            <state line="9" column="11" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -190,7 +192,7 @@
       <file leaf-file-name="MatchedLine.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="62" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="19" column="34" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,7 +203,7 @@
       <file leaf-file-name="MatchedGroup.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="204" selection-end="204" vertical-scroll-proportion="-13.125">
+            <state line="22" column="18" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -652,63 +654,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.CharBufferMatcherTest.knowsWhereTheMatchedExpressionStartsAndEnds">
-    <configuration default="false" name="OperatingSystemNameTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="true" merge="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.ixcode.grep.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="java-grep" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
-      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.OperatingSystemNameTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="CharBufferMatcherTest.matchesAPatternInALine" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="true" merge="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.ixcode.grep.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="java-grep" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
-      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.CharBufferMatcherTest" />
-      <option name="METHOD_NAME" value="matchesAPatternInALine" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.org.ixcode.grep in java-grep">
     <configuration default="false" name="CharBufferMatcherTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="true" merge="true" runner="idea">
         <pattern>
@@ -780,6 +726,62 @@
       <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.CharBufferMatcherTest" />
       <option name="METHOD_NAME" value="knowsWhereTheMatchedExpressionStartsAndEnds" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CharBufferMatcherTest.extractsGroupsFromExpression" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="true" merge="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.ixcode.grep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="java-grep" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
+      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.CharBufferMatcherTest" />
+      <option name="METHOD_NAME" value="extractsGroupsFromExpression" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="org.ixcode.grep in java-grep" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="true" merge="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.ixcode.grep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="java-grep" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
@@ -915,11 +917,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.OperatingSystemNameTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest.matchesAPatternInALine" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FileScannerIntegrationTest.scansTheTestFiles" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest.knowsWhereTheMatchedExpressionStartsAndEnds" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FileScannerIntegrationTest.scansTheTestFiles" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest.knowsWhereTheMatchedExpressionStartsAndEnds" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CharBufferMatcherTest.extractsGroupsFromExpression" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.org.ixcode.grep in java-grep" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -957,15 +959,15 @@
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3767074" sideWeight="0.64871794" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26923078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26923078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29978433" sideWeight="0.72179484" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29978433" sideWeight="0.6628205" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -988,7 +990,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added groups to match result" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted a group object" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1021,6 +1023,7 @@
     <MESSAGE value="Removed some demeter from matched line" />
     <MESSAGE value="Testing integration tests" />
     <MESSAGE value="Added groups to match result" />
+    <MESSAGE value="Extracted a group object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1086,13 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="27" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/src.jar!/src/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="407" column="6" selection-start="18718" selection-end="18718" vertical-scroll-proportion="0.0">
@@ -1102,30 +1098,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatcherResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
+        <state line="9" column="11" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="62" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+        <state line="19" column="34" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/MatchedGroup.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/CharBufferMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="204" selection-end="204" vertical-scroll-proportion="-13.125">
+        <state line="38" column="24" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/CharBufferMatcherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="39" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.59737825">
+        <state line="50" column="45" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.5778689">
           <folding />
         </state>
       </provider>
