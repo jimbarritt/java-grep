@@ -24,7 +24,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void matchesAPatternInALine() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher(".*(foobar)\\:.*");
+        CharBufferMatcher matcher = new CharBufferMatcher("(.*)foobar\\:.*");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8(
                         "line 1",
                         "some foobar: line 2",
@@ -33,10 +33,37 @@ public class CharBufferMatcherTest {
         MatcherResult matcherResult = matcher.match(someLinesOfText);
 
         assertThat(matcherResult.matchedLineCount(), is(1));
+
         MatchedLine matchedLine = matcherResult.matchedLines(0);
         assertThat(matchedLine.lineText(), is("some foobar: line 2"));
-        assertThat(matchedLine.groups().size(), is(1));
     }
+
+
+    @Test
+    public void extractsGroupsFromExpression() throws Exception {
+        CharBufferMatcher matcher = new CharBufferMatcher("(.*)foobar\\:.*");
+        CharBuffer someLinesOfText = writeSomeLinesInUtf8("some foobar: line 2");
+
+        MatcherResult matcherResult = matcher.match(someLinesOfText);
+
+        MatchedLine matchedLine = matcherResult.matchedLines(0);
+        assertThat(matchedLine.groups().size(), is(1));
+        assertThat(matchedLine.groups().get(0).text(), is("some "));
+    }
+
+
+    @Test
+    public void knowsWhereTheMatchedExpressionStartsAndEnds() throws Exception {
+        CharBufferMatcher matcher = new CharBufferMatcher("foobar");
+        CharBuffer someLinesOfText = writeSomeLinesInUtf8("some foobar: line 2");
+
+        MatcherResult matcherResult = matcher.match(someLinesOfText);
+
+        MatchedLine matchedLine = matcherResult.matchedLines(0);
+        assertThat(matchedLine.start(), is(5));
+        assertThat(matchedLine.end(), is(11));
+    }
+
     
 
     private static CharBuffer writeSomeLinesInUtf8(String... lines) throws UnsupportedEncodingException {

@@ -5,17 +5,19 @@ import java.util.regex.*;
 
 public class MatchedLine {
     private final CharSequence line;
-    private List<String> groups;
+    private List<MatchedGroup> groups;
+    private MatchResult matchResult;
 
     public MatchedLine(CharSequence line, MatchResult matchResult) {
         this.line = line;        
         this.groups = extractGroups(matchResult);
+        this.matchResult = matchResult;
     }
 
-    private List<String> extractGroups(MatchResult matchResult) {
-        List<String> groups = new ArrayList<String>();
-        for (int iGroup=0;iGroup<matchResult.groupCount();++iGroup) {
-            groups.add(matchResult.group(iGroup));
+    private List<MatchedGroup> extractGroups(MatchResult matchResult) {
+        List<MatchedGroup> groups = new ArrayList<MatchedGroup>();
+        for (int iGroup=1;iGroup<=matchResult.groupCount();++iGroup) {
+            groups.add(new MatchedGroup(matchResult.group(iGroup)));
         }
         return groups;
     }
@@ -24,7 +26,16 @@ public class MatchedLine {
         return line.toString();
     }
 
-    public List<String> groups() {
+    public List<MatchedGroup> groups() {
         return this.groups;
+    }
+
+
+    public int start() {
+        return matchResult.start();
+    }
+
+    public Integer end() {
+        return matchResult.end();
     }
 }
