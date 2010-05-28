@@ -1,4 +1,4 @@
-package org.ixcode.grep;
+package org.ixcode.grep.os;
 
 public enum OperatingSystemName {
     OSX("Mac OS X"), WINDOWS("Windows");

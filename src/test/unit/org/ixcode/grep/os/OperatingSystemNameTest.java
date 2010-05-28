@@ -1,9 +1,9 @@
-package org.ixcode.grep;
+package org.ixcode.grep.os;
 
 import org.junit.*;
 
 import static org.hamcrest.core.Is.*;
-import static org.ixcode.grep.OperatingSystemName.*;
+import static org.ixcode.grep.os.OperatingSystemName.*;
 import static org.junit.Assert.*;
 
 public class OperatingSystemNameTest {

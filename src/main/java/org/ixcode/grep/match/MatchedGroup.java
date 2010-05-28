@@ -1,4 +1,4 @@
-package org.ixcode.grep;
+package org.ixcode.grep.match;
 
 public class MatchedGroup {
     private final String text;

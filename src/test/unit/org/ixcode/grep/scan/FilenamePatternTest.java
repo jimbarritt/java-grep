@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.*;
 import static org.junit.Assert.*;
 
 public class FilenamePatternTest {
-
+   
     @Test
     public void constructsAppropriateRegex() {
         FilenamePattern filenamePattern = new FilenamePattern("*.java");

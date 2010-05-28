@@ -11,10 +11,11 @@ public class FilenamePattern {
     }
 
     public boolean matches(String input) {
-        return pattern.matcher(input).matches();        
+        return pattern.matcher(input).matches();
     }
 
     public String toString() {
         return pattern.pattern();
     }
+
 }

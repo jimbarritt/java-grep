@@ -1,4 +1,4 @@
-package org.ixcode.grep;
+package org.ixcode.grep.match;
 
 import org.junit.*;
 
