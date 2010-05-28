@@ -1,14 +1,12 @@
 package org.ixcode.grep.scan;
 
-import java.io.*;
-
 import org.apache.log4j.*;
 import org.junit.*;
 
 import java.io.*;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.*;
+import static org.junit.Assert.*;
 
 
 public class FileScannerIntegrationTest {
@@ -21,7 +19,7 @@ public class FileScannerIntegrationTest {
         FileCounter fileCounter = new FileCounter();
         scanner.scan(fileCounter);
 
-        assertThat(fileCounter.fileCount(), is(7L));
+        assertThat(fileCounter.fileCount(), is(7L));        
     }
 
     private static final class FileCounter implements FileScanningAction {
