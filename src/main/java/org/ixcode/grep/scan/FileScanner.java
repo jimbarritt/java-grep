@@ -12,7 +12,7 @@ public class FileScanner {
     private final String fileType;
 
     public FileScanner(File rootDir, String fileType) {
-        this.rootDir = rootDir;
+        this.rootDir = rootDir;                
         this.fileType = fileType;
     }
 
@@ -21,7 +21,7 @@ public class FileScanner {
             @Override
             public boolean accept(File dir, String name) {
                 return name.endsWith(fileType);
-            }
+            }         
         };
 
         log.debug("Scanning files matching [" + fileType + "] in [" + rootDir.getAbsolutePath() + "]");

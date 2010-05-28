@@ -7,7 +7,7 @@ public class MatchedLine {
         this.line = line;
     }
 
-    public CharSequence lineText() {
-        return line;
+    public String lineText() {
+        return line.toString();
     }
 }
