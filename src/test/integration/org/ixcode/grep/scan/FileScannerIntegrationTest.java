@@ -3,8 +3,6 @@ package org.ixcode.grep.scan;
 import org.apache.log4j.*;
 import org.junit.*;
 
-import java.io.*;
-
 import static org.hamcrest.core.Is.*;
 import static org.junit.Assert.*;
 
@@ -27,9 +25,9 @@ public class FileScannerIntegrationTest {
         private long fileCount;
 
         @Override
-        public void scanFile(File file) {
+        public void scanFile(SearchFile searchFile) {
             fileCount++;
-            log.debug("Scanning file [" + file.getAbsolutePath() + "]");
+            log.debug("Scanning file [" + searchFile + "]");
         }
 
         public long fileCount() {

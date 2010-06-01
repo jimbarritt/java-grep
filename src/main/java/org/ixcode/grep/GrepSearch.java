@@ -2,7 +2,6 @@ package org.ixcode.grep;
 
 import org.ixcode.grep.scan.*;
 
-import java.io.*;
 import java.util.*;
 
 public class GrepSearch implements FileScanningAction {
@@ -11,7 +10,7 @@ public class GrepSearch implements FileScanningAction {
     }
 
     @Override
-    public void scanFile(File file) {
+    public void scanFile(SearchFile searchFile) {
 
     }
 

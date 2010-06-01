@@ -27,7 +27,7 @@ public class FileScanner {
         File[] files = parentDir.listFiles(filter);
         if (files != null) {
             for (File file : files) {
-                fileScanningAction.scanFile(file);
+                fileScanningAction.scanFile(new SearchFile(file));
             }
         }
         File[] directories = parentDir.listFiles(DIRECTORY_FILTER);
