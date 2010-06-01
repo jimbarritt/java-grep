@@ -9,10 +9,6 @@ public class SearchFile {
         this.delegate = delegate;
     }
 
-    public File asFile() {
-        return delegate;
-    }
-
     public String toString() {
         return delegate.getAbsolutePath();
     }

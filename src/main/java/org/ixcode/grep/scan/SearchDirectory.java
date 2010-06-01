@@ -16,10 +16,6 @@ public class SearchDirectory {
         this(new File(directoryPath));        
     }
 
-    public File asFile() {
-        return delegate;
-    }
-
     public String toString() {
         return delegate.getAbsolutePath();
     }
@@ -37,6 +33,7 @@ public class SearchDirectory {
 
     public List<SearchDirectory> listDirectories() {
         ArrayList<SearchDirectory> directoryArrayList = new ArrayList<SearchDirectory>();
+        
         File[] directories = delegate.listFiles(DIRECTORY_FILTER);
         if (directories != null) {
             for(File directory : directories) {
