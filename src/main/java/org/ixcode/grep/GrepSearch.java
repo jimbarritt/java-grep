@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.*;
 
 public class GrepSearch implements FileScanningAction {
-    public GrepSearch(String searchExpression, SearchOption caseInsensitive) {
+    public GrepSearch(String searchExpression) {
 
     }
 
@@ -23,7 +23,4 @@ public class GrepSearch implements FileScanningAction {
         return null;
     }
 
-    public static enum SearchOption {
-        CASE_INSENSITIVE
-    }
 }

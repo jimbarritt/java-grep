@@ -11,8 +11,8 @@ public class FileScanner {
     private final File rootDir;
     private final FilenamePattern filenamePattern;
 
-    public FileScanner(File rootDir, FilenamePattern filenamePattern) {
-        this.rootDir = rootDir;                
+    public FileScanner(SearchDirectory rootDir, FilenamePattern filenamePattern) {
+        this.rootDir = rootDir.asFile();                
         this.filenamePattern = filenamePattern;
     }
 

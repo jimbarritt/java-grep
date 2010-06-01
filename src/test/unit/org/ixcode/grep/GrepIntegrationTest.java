@@ -7,7 +7,6 @@ import java.io.*;
 import java.util.*;
 
 import static org.hamcrest.core.Is.*;
-import static org.ixcode.grep.GrepSearch.SearchOption.*;
 import static org.junit.Assert.*;
 
 public class GrepIntegrationTest {
@@ -16,13 +15,13 @@ public class GrepIntegrationTest {
     public void grepsFiles() {
         Grep grep = new Grep(new FileScanner(projectFileFrom("/src/test/resource/testfiles"), new FilenamePattern("*.txt")));
 
-        List<MatchedFile> matchedFiles = grep.searchFor(new GrepSearch("todo", CASE_INSENSITIVE));
+        List<MatchedFile> matchedFiles = grep.searchFor(new GrepSearch("todo"));
 
         assertThat(matchedFiles.size(), is(1));                
     }
 
-    private static File projectFileFrom(String path) {
-        return new File(projectRootDir(), path);
+    private static SearchDirectory projectFileFrom(String path) {
+        return new SearchDirectory(new File(projectRootDir(), path).getAbsolutePath());
     }
 
     public static File projectRootDir() {
