@@ -14,7 +14,7 @@ public class GrepIntegrationTest {
     @Test
     @Ignore("Not ready for this yet:)")
     public void grepsFiles() {
-        Grep grep = new Grep(new FileScanner(projectFileFrom("/src/test/resource/testfiles"), new FilenamePattern("*.txt")));
+        Grep grep = new Grep(new FileScanner(projectFileFrom("/src/test/resource/testfiles"), new PatternBasedFilenameFilter(new FilenamePattern("*.txt"))));
 
         List<MatchedFile> matchedFiles = grep.searchFor(new GrepSearch("todo"));
 

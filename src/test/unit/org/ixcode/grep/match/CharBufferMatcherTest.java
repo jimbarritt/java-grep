@@ -5,8 +5,8 @@ import org.junit.*;
 import java.io.*;
 import java.nio.*;
 
-import static org.hamcrest.core.Is.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 public class CharBufferMatcherTest {
 

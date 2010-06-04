@@ -10,18 +10,16 @@ public class FileScanner {
 
     
     private final SearchDirectory rootDir;
-    private final FilenamePattern filenamePattern;
+    private final FilenameFilter filenameFilter;
 
-    public FileScanner(SearchDirectory rootDir, FilenamePattern filenamePattern) {
+    public FileScanner(SearchDirectory rootDir, FilenameFilter filenameFilter) {
         this.rootDir = rootDir;
-        this.filenamePattern = filenamePattern;
+        this.filenameFilter = filenameFilter;
     }
 
     public void scan(FileScanningAction fileScanningAction) {
-        PatternBasedFilenameFilter filter = new PatternBasedFilenameFilter(filenamePattern);
-
-        log.debug("Scanning files matching [" + filenamePattern + "] in [" + rootDir + "]");
-        scanFiles(rootDir, filter, fileScanningAction);
+        log.debug("Scanning files matching [" + filenameFilter + "] in [" + rootDir + "]");
+        scanFiles(rootDir, filenameFilter, fileScanningAction);
     }
 
     private void scanFiles(SearchDirectory parentDir, FilenameFilter filter, FileScanningAction fileScanningAction) {
@@ -31,10 +29,10 @@ public class FileScanner {
                 fileScanningAction.scanFile(file);
             }
         }
-        List<SearchDirectory> directories = parentDir.listDirectories();
-        if (directories != null) {
-            for(SearchDirectory directory : directories) {
-                scanFiles(directory, filter, fileScanningAction);
+        List<SearchDirectory> subDirectories = parentDir.listSubDirectories();
+        if (subDirectories != null) {
+            for(SearchDirectory subDirectory : subDirectories) {
+                scanFiles(subDirectory, filter, fileScanningAction);
             }
         }
     }

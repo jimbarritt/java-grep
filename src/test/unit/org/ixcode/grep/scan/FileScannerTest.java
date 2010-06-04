@@ -18,11 +18,11 @@ public class FileScannerTest {
                                                 .withFile("subFoobarB.txt");
 
         SearchDirectory rootDirectory = new SearchDirectoryStub()
-                                                    .withFile("foobarA.txt")
-                                                    .withFile("foobarB.java")
-                                                    .withSubDirectory(subDirectory);
+                                                .withFile("foobarA.txt")
+                                                .withFile("foobarB.java")
+                                                .withSubDirectory(subDirectory);
 
-        FileScanner scanner = new FileScanner(rootDirectory, new FilenamePattern("*.txt"));
+        FileScanner scanner = new FileScanner(rootDirectory, new PatternBasedFilenameFilter(new FilenamePattern("*.txt")));
 
         FileCounter fileCounter = new FileCounter();
 
@@ -80,13 +80,15 @@ public class FileScannerTest {
             return foundFiles;
         }
 
-        @Override public List<SearchDirectory> listDirectories() {
+        @Override public List<SearchDirectory> listSubDirectories() {
             return subDirectories;
         }
 
         @Override public String toString() {
             return "StubDirectory";
         }
+
+
     }
 
     private static class SearchFileStub extends SearchFile {

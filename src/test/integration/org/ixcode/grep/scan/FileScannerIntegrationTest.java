@@ -3,8 +3,8 @@ package org.ixcode.grep.scan;
 import org.apache.log4j.*;
 import org.junit.*;
 
-import static org.hamcrest.core.Is.*;
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 
 public class FileScannerIntegrationTest {
@@ -13,7 +13,7 @@ public class FileScannerIntegrationTest {
 
     @Test
     public void scansTheTestFiles() {
-        FileScanner scanner = new FileScanner(new SearchDirectory("src/test/resource/testfiles"), new FilenamePattern("*.txt"));
+        FileScanner scanner = new FileScanner(new SearchDirectory("src/test/resource/testfiles"), new PatternBasedFilenameFilter(new FilenamePattern("*.txt")));
         FileScannerTest.FileCounter fileCounter = new FileScannerTest.FileCounter();
         scanner.scan(fileCounter);
 

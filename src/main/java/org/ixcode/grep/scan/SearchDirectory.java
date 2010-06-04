@@ -31,7 +31,7 @@ public class SearchDirectory {
         return searchFiles;
     }
 
-    public List<SearchDirectory> listDirectories() {
+    public List<SearchDirectory> listSubDirectories() {
         ArrayList<SearchDirectory> directoryArrayList = new ArrayList<SearchDirectory>();
         
         File[] directories = delegate.listFiles(DIRECTORY_FILTER);
