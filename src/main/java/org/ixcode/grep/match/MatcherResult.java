@@ -4,12 +4,10 @@ import java.util.*;
 
 public class MatcherResult {
     private final int processedLineCount;
-    private final int matchedLinesCount;
     private final List<MatchedLine> matchedLines;
 
-    public MatcherResult(int processedLineCount, int matchedLinesCount, List<MatchedLine> matchedLines) {
+    public MatcherResult(int processedLineCount, List<MatchedLine> matchedLines) {
         this.processedLineCount = processedLineCount;
-        this.matchedLinesCount = matchedLinesCount;
         this.matchedLines = matchedLines;
     }
 
@@ -18,10 +16,14 @@ public class MatcherResult {
     }
 
     public int matchedLineCount() {
-        return matchedLinesCount;
+        return matchedLines.size();
     }
 
-    public MatchedLine matchedLines(int matchedLineIndex) {
+    public MatchedLine matchedLine(int matchedLineIndex) {
         return matchedLines.get(matchedLineIndex);
+    }
+
+    public boolean matched() {
+        return matchedLineCount() > 0;
     }
 }

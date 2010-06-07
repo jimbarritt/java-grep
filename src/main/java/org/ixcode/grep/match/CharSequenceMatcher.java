@@ -14,7 +14,6 @@ public class CharSequenceMatcher {
     public MatcherResult match(CharSequence charSequence) {
         Matcher lineMatcher = LINE_PATTERN.matcher(charSequence);
         int processedLineCount = 0;
-        int matchedLinesCount = 0;
         List<MatchedLine> matchedLines = new ArrayList<MatchedLine>();
 
         while (lineMatcher.find()) {
@@ -23,7 +22,6 @@ public class CharSequenceMatcher {
             CharSequence line = lineMatcher.group(1);
             Matcher searchPatternMatcher = searchPattern.matcher(line);
             if (searchPatternMatcher.find()) {
-                matchedLinesCount++;
                 matchedLines.add(createMatchedLine(processedLineCount, line, searchPatternMatcher));
             }
 
@@ -31,7 +29,7 @@ public class CharSequenceMatcher {
                 break;
             }
         }
-        return new MatcherResult(processedLineCount, matchedLinesCount, matchedLines);
+        return new MatcherResult(processedLineCount, matchedLines);
     }
 
     private static MatchedLine createMatchedLine(int lineNumber, CharSequence line, Matcher searchPatternMatcher) {

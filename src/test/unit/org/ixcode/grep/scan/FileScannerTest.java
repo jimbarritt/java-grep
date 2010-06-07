@@ -92,16 +92,30 @@ public class FileScannerTest {
 
     }
 
-    private static class SearchFileStub extends SearchFile {
+    public static SearchFile stubSearchFile(String filename, String fileContents) {
+        return new SearchFileStub(filename, fileContents);
+    }
+
+    public static class SearchFileStub extends SearchFile {
         private final String filename;
+        private final String fileContents;
 
         public SearchFileStub(String filename) {
+            this(filename, "");
+        }
+
+        public SearchFileStub(String filename, String fileContents) {
             super(null);
             this.filename = filename;
+            this.fileContents = fileContents;
         }
 
         @Override public String toString() {
             return filename;
+        }
+
+        @Override public CharSequence readFile() {
+            return fileContents;
         }
     }
 

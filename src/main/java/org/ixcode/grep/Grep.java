@@ -1,5 +1,6 @@
 package org.ixcode.grep;
 
+import org.ixcode.grep.match.*;
 import org.ixcode.grep.scan.*;
 
 import java.util.*;
@@ -18,6 +19,6 @@ public class Grep {
 
     public static List<MatchedFile> search(String rootDirectoryPath, String filenamePattern) {
         Grep grep = new Grep(new FileScanner(new SearchDirectory(rootDirectoryPath), new PatternBasedFilenameFilter(new FilenamePattern(filenamePattern))));
-        return grep.searchFor(new GrepSearch("todo"));
+        return grep.searchFor(new GrepSearch(new CharSequenceMatcher(filenamePattern)));
     }
 }

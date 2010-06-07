@@ -12,4 +12,8 @@ public class SearchFile {
     public String toString() {
         return delegate.getAbsolutePath();
     }
+
+    public CharSequence readFile() {
+        return null;
+    }
 }

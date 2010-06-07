@@ -34,7 +34,7 @@ public class CharBufferMatcherTest {
 
         assertThat(matcherResult.matchedLineCount(), is(1));
 
-        MatchedLine matchedLine = matcherResult.matchedLines(0);
+        MatchedLine matchedLine = matcherResult.matchedLine(0);
         assertThat(matchedLine.lineText(), is("some foobar: line 2"));
         assertThat(matchedLine.lineNumber(), is(2));
     }
@@ -46,7 +46,7 @@ public class CharBufferMatcherTest {
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);
 
-        MatchedLine matchedLine = matcherResult.matchedLines(0);
+        MatchedLine matchedLine = matcherResult.matchedLine(0);
         assertThat(matchedLine.start(), is(5));
         assertThat(matchedLine.end(), is(11));
     }
@@ -60,7 +60,7 @@ public class CharBufferMatcherTest {
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);
 
-        MatchedLine matchedLine = matcherResult.matchedLines(0);
+        MatchedLine matchedLine = matcherResult.matchedLine(0);
 
         assertThat(matchedLine.groups().size(), is(1));
         MatchedGroup matchedGroup = matchedLine.groups().get(0);

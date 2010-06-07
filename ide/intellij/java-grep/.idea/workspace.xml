@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="">
+    <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="Added grep file search">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepSearchTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepSearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharBufferMatcher.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatcherResult.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatcherResult.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -45,7 +48,7 @@
     <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_extractsGroupsFromExpression.ic" NAME="CharBufferMatcherTest.extractsGroupsFromExpression Coverage Results" MODIFIED="1275047916592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1275941462341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java-grep$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1275949637904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_countsTheNumberOfLines..es" NAME="CharBufferMatcherTest.countsTheNumberOfLines Coverage Results" MODIFIED="1274987845371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -179,19 +182,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExampleOfFileGrep.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="21" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GrepSearch.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+            <state line="29" column="27" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -200,7 +194,7 @@
       <file leaf-file-name="CharSequenceMatcher.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="56" selection-start="414" selection-end="414" vertical-scroll-proportion="0.09090909">
+            <state line="35" column="46" selection-start="1299" selection-end="1299" vertical-scroll-proportion="1.1564482">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,25 +205,36 @@
       <file leaf-file-name="GrepSearchTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepSearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="10" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="31" column="47" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GrepTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchedGroup.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatchedGroup.java">
+      <file leaf-file-name="MatcherResult.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatcherResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+            <state line="26" column="37" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringBuffer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/src.jar!/src/java/lang/StringBuffer.java">
+      <file leaf-file-name="FileScannerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="11" selection-start="4066" selection-end="4066" vertical-scroll-proportion="0.0">
+            <state line="82" column="0" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -255,20 +260,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepTest.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanningAction.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchDirectory.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FilenamePatternTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatcherResult.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepSearchTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java" />
       </list>
@@ -1082,26 +1087,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GrepSearch" />
+              <option name="myItemId" value="GrepSearchTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.ixcode.grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+              <option name="myItemId" value="MatcherResultStub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1142,6 +1133,50 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="match" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MatcherResult" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="match" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="match" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CharSequenceMatcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1232,34 +1267,6 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.Run All Tests">
-    <configuration default="false" name="GrepTest.grepsFilesUsingTheFileScanner" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.ixcode.grep.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="java-grep" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
-      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.GrepTest" />
-      <option name="METHOD_NAME" value="grepsFilesUsingTheFileScanner" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="FileScannerTest.scansADirectory" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="idea">
         <pattern>
@@ -1329,6 +1336,62 @@
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="org.ixcode.grep.scan" />
       <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.scan.FileScannerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GrepSearchTest.scansAFile" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.ixcode.grep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="java-grep" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
+      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.GrepSearchTest" />
+      <option name="METHOD_NAME" value="scansAFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GrepSearchTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.ixcode.grep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="java-grep" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="org.ixcode.grep" />
+      <option name="MAIN_CLASS_NAME" value="org.ixcode.grep.GrepSearchTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j-unit-test.xml" />
@@ -1495,7 +1558,7 @@
       <method />
     </configuration>
     <configuration default="false" name="Run All Tests" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="true" merge="false" runner="idea">
+      <extension name="coverage" enabled="true" merge="false" per_test_coverage_enabled="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="org.ixcode.grep.*" />
           <option name="ENABLED" value="true" />
@@ -1522,13 +1585,14 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.ExampleOfFileGrep" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GrepTest.grepsFilesUsingTheFileScanner" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FileScannerTest.scansADirectory" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FilenamePatternTest.matchesTextFiles" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.FileScannerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FileScannerTest.scansADirectory" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FilenamePatternTest.matchesTextFiles" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FileScannerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.GrepSearchTest.scansAFile" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.GrepSearchTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1554,7 +1618,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1573,7 +1637,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27174693" sideWeight="0.6628205" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27174693" sideWeight="0.6628205" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1597,7 +1661,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added static factory method for grep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added grep file search" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1610,8 +1674,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Added osname test" />
-    <MESSAGE value="Got 100% line coverage" />
     <MESSAGE value="Refactored CharBufferTest to allow lines to be created easily&#10;" />
     <MESSAGE value="Renamed test&#10;&#9;&#9;" />
     <MESSAGE value="Implemented matcher result&#10;&#9;&#9;" />
@@ -1635,6 +1697,8 @@
     <MESSAGE value="Pulled out construction of PatternBasedFilenameFilter from FileScanner for mocking" />
     <MESSAGE value="Introduced helpful static factory" />
     <MESSAGE value="Added static factory method for grep" />
+    <MESSAGE value="Refactored matcher to CharSequenceMatcher" />
+    <MESSAGE value="Added grep file search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1644,43 +1708,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="71" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchDirectory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1275939261000" expanded="false" signature="33:139" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/src.jar!/src/java/nio/charset/CharsetDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="755" column="28" selection-start="26920" selection-end="26920" vertical-scroll-proportion="0.0">
@@ -1730,13 +1757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatchedGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
@@ -1744,16 +1764,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="316" selection-end="328" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="87" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="2710" selection-end="2710" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/MatcherResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="37" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="27" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="31" column="47" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/match/CharSequenceMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="414" selection-end="414" vertical-scroll-proportion="0.09090909">
+        <state line="35" column="46" selection-start="1299" selection-end="1299" vertical-scroll-proportion="1.1564482">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
