@@ -16,4 +16,8 @@ public class Grep {
         return grepSearch.matchedFiles();
     }
 
+    public static List<MatchedFile> search(String rootDirectoryPath, String filenamePattern) {
+        Grep grep = new Grep(new FileScanner(new SearchDirectory(rootDirectoryPath), new PatternBasedFilenameFilter(new FilenamePattern(filenamePattern))));
+        return grep.searchFor(new GrepSearch("todo"));
+    }
 }

@@ -1,9 +1,7 @@
 package org.ixcode.grep;
 
-import org.ixcode.grep.scan.*;
 import org.junit.*;
 
-import java.io.*;
 import java.util.*;
 
 import static org.hamcrest.core.Is.*;
@@ -14,18 +12,9 @@ public class GrepIntegrationTest {
     @Test
     @Ignore("Not ready for this yet:)")
     public void grepsFiles() {
-        Grep grep = new Grep(new FileScanner(projectFileFrom("/src/test/resource/testfiles"), new PatternBasedFilenameFilter(new FilenamePattern("*.txt"))));
-
-        List<MatchedFile> matchedFiles = grep.searchFor(new GrepSearch("todo"));
+        List<MatchedFile> matchedFiles = Grep.search("./src/test/resource/testfiles", "*.txt");
 
         assertThat(matchedFiles.size(), is(1));                
     }
 
-    private static SearchDirectory projectFileFrom(String path) {
-        return new SearchDirectory(new File(projectRootDir(), path).getAbsolutePath());
-    }
-
-    public static File projectRootDir() {
-        return new File(".");
-    }
 }
