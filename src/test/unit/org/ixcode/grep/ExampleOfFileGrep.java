@@ -6,8 +6,12 @@ import java.nio.channels.*;
 import java.nio.charset.*;
 import java.util.regex.*;
 
+/**
+ * See http://java.sun.com/j2se/1.4.2/docs/guide/nio/example/index.html
+ * 
+ */
 public class ExampleOfFileGrep {
-    
+
     private static Charset charset = Charset.forName("UTF-8");
     private static CharsetDecoder decoder = charset.newDecoder();
 
@@ -24,7 +28,7 @@ public class ExampleOfFileGrep {
         }
     }
 
-    private static void grep(File inputFile, CharBuffer cb) {
+    private static void grep(String inputFileName, CharBuffer cb) {
         Matcher lm = LINE_PATTERN.matcher(cb);
         Matcher pm = null;
         int lines = 0;
@@ -37,7 +41,7 @@ public class ExampleOfFileGrep {
                 pm.reset(cs);
             }
             if (pm.find()) {
-                System.out.print(inputFile + ":" + lines + ":" + cs);
+                System.out.print(inputFileName + ":" + lines + ":" + cs);
             }
             if (lm.end() == cb.limit()) {
                 break;
@@ -46,19 +50,19 @@ public class ExampleOfFileGrep {
     }
 
     private static void grep(File inputFile) throws IOException {
+
         FileInputStream fis = new FileInputStream(inputFile);
         FileChannel channel = fis.getChannel();
-
+        MappedByteBuffer bb = null;
         try {
-            int sz = (int) channel.size();
-            MappedByteBuffer bb = channel.map(FileChannel.MapMode.READ_ONLY, 0, sz);
-
-            CharBuffer cb = decoder.decode(bb);
-
-            grep(inputFile, cb);
+            int sz = (int) channel.size();            
+            bb = channel.map(FileChannel.MapMode.READ_ONLY, 0, sz);
         } finally {
             channel.close();
+            fis.close();            
         }
+        CharBuffer cb = decoder.decode(bb);
+        grep(inputFile.getAbsolutePath(), cb);
     }
 
     public static void main(String[] args) {

@@ -12,7 +12,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void countsTheNumberOfLines() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher(".*");
+        CharSequenceMatcher matcher = new CharSequenceMatcher(".*");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8(
                 "line 1",
                 "line 2",
@@ -24,7 +24,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void matchesAPatternInALine() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher(".*foobar\\:.*");
+        CharSequenceMatcher matcher = new CharSequenceMatcher(".*foobar\\:.*");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8(
                         "line 1",
                         "some foobar: line 2",
@@ -41,7 +41,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void knowsWhereTheMatchedExpressionStartsAndEnds() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher("foobar");
+        CharSequenceMatcher matcher = new CharSequenceMatcher("foobar");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8("some foobar: line 2");
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);
@@ -55,7 +55,7 @@ public class CharBufferMatcherTest {
 
     @Test
     public void extractsGroupsFromExpression() throws Exception {
-        CharBufferMatcher matcher = new CharBufferMatcher("(.*)foobar\\:.*");
+        CharSequenceMatcher matcher = new CharSequenceMatcher("(.*)foobar\\:.*");
         CharBuffer someLinesOfText = writeSomeLinesInUtf8("some foobar: line 2");
 
         MatcherResult matcherResult = matcher.match(someLinesOfText);

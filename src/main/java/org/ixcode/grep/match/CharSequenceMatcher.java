@@ -1,19 +1,18 @@
 package org.ixcode.grep.match;
 
-import java.nio.*;
 import java.util.*;
 import java.util.regex.*;
 
-public class CharBufferMatcher {
+public class CharSequenceMatcher {
     private static final Pattern LINE_PATTERN = Pattern.compile("(.*)\r?\n");
     private final Pattern searchPattern;
 
-    public CharBufferMatcher(String searchExpression) {
+    public CharSequenceMatcher(String searchExpression) {
         searchPattern = Pattern.compile(searchExpression);
     }
 
-    public MatcherResult match(CharBuffer charBuffer) {
-        Matcher lineMatcher = LINE_PATTERN.matcher(charBuffer);
+    public MatcherResult match(CharSequence charSequence) {
+        Matcher lineMatcher = LINE_PATTERN.matcher(charSequence);
         int processedLineCount = 0;
         int matchedLinesCount = 0;
         List<MatchedLine> matchedLines = new ArrayList<MatchedLine>();
@@ -28,7 +27,7 @@ public class CharBufferMatcher {
                 matchedLines.add(createMatchedLine(processedLineCount, line, searchPatternMatcher));
             }
 
-            if (lineMatcher.end() == charBuffer.limit()) {
+            if (lineMatcher.end() == charSequence.length()) {
                 break;
             }
         }
