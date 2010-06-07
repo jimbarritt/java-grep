@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="Put in new stubbed test for FileScanner">
+    <list default="true" readonly="true" id="856d5a57-a0c5-4b3a-a502-6947bc5a518c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java" afterPath="$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java" afterPath="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchDirectory.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchDirectory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java" afterPath="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java" />
     </list>
-    <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
+    <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +36,13 @@
     <SUITE FILE_PATH="coverage/java-grep$FileScannerIntegrationTest_scansTheTestFiles.ic" NAME="FileScannerIntegrationTest.scansTheTestFiles Coverage Results" MODIFIED="1275049279962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.scan.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_extractsGroupsFromExpression.ic" NAME="CharBufferMatcherTest.extractsGroupsFromExpression Coverage Results" MODIFIED="1275047916592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>org.ixcode.grep.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$PatternBasedFilenameFilterTest..es" NAME="PatternBasedFilenameFilterTest Coverage Results" MODIFIED="1274041045385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.ixcode.grep.scan.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/java-grep$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1275669748621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_extractsGroupsFromExpression.ic" NAME="CharBufferMatcherTest.extractsGroupsFromExpression Coverage Results" MODIFIED="1275047916592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.ixcode.grep.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java-grep$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1275938811814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>org.ixcode.grep.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/java-grep$CharBufferMatcherTest_countsTheNumberOfLines..es" NAME="CharBufferMatcherTest.countsTheNumberOfLines Coverage Results" MODIFIED="1274987845371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="emma" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -165,10 +161,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileScanner.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FileScanner.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="61" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+            <state line="15" column="23" selection-start="403" selection-end="403" vertical-scroll-proportion="0.16701902">
               <folding />
             </state>
           </provider>
@@ -177,10 +173,8 @@
       <file leaf-file-name="FileScannerIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="158" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="17" column="34" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,19 +191,17 @@
       <file leaf-file-name="PatternBasedFilenameFilter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="32" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+            <state line="11" column="40" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileScannerTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileScannerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="71" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.6454918">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="25" column="71" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/FileGrepScanningAction.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepFileScanningAction.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepFileScanningActionTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java" />
@@ -255,10 +246,11 @@
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchFile.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FilenamePatternTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java" />
       </list>
     </option>
   </component>
@@ -297,257 +289,7 @@
       <sortByType PackagesPane="true" ProjectPane="true" />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hamcrest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apache.commons.lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apache.commons.lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_02_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testfiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level_01_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.ixcode.grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.ixcode.grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="match" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-grep" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -824,27 +566,339 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hamcrest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apache.commons.lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apache.commons.lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="builder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01_02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01_02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_02_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testfiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level_01_01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FileScannerTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FilenamePattern" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.ixcode.grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="match" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-grep" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="122" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="162" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="133" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="142" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="933" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="922" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="937" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="139" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="158" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="138" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="156" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
@@ -852,8 +906,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -861,8 +915,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -873,6 +927,7 @@
       <recent name="org.ixcode.grep.OperatingSystem" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="org.ixcode.grep.scan.PatternBasedFilenameFilter" />
       <recent name="org.ixcode.grep.scan.FileScannerTest" />
       <recent name="org.ixcode.grep.GrepSearch" />
     </key>
@@ -897,7 +952,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.FileScannerTest.scansADirectory">
+  <component name="RunManager" selected="JUnit.Run All Tests">
     <configuration default="false" name="GrepIntegrationTest.grepsFiles" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="true" sample_coverage="true" runner="idea">
         <pattern>
@@ -1219,7 +1274,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1228,9 +1283,9 @@
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62616825" sideWeight="0.6628205" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6261484" sideWeight="0.6628205" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-5" y="642" width="1391" height="256" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26923078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1238,7 +1293,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2969087" sideWeight="0.6628205" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2969087" sideWeight="0.6628205" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1262,7 +1317,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put in new stubbed test for FileScanner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pulled out construction of PatternBasedFilenameFilter from FileScanner for mocking" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1275,7 +1330,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Playing with intellij coverage tool" />
     <MESSAGE value="Refactored to get abstraction a bit nicer" />
     <MESSAGE value="Added file line scanner" />
     <MESSAGE value="Added osname test" />
@@ -1300,6 +1354,7 @@
     <MESSAGE value="Third step, extracted logic that walks over files and got back to green" />
     <MESSAGE value="Tidying up" />
     <MESSAGE value="Put in new stubbed test for FileScanner" />
+    <MESSAGE value="Pulled out construction of PatternBasedFilenameFilter from FileScanner for mocking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1321,105 +1376,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/Grep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/ExampleOfFileGrep.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/resource/testfiles/level_01/level_01_02/level_02_01/file_02_01_A.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/src.jar!/src/java/io/FilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="10" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="25" column="10" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="843" selection-end="886" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="30" column="29" selection-start="843" selection-end="886" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/match/CharBufferMatcherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/SearchDirectory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="29" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FilenamePattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="156" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="11" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/integration/org/ixcode/grep/scan/FileScannerIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="158" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="17" column="34" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/GrepIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="156" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/PatternBasedFilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="61" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="40" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/unit/org/ixcode/grep/scan/FileScannerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="71" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.6454918">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="25" column="71" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/GrepSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/org/ixcode/grep/scan/FileScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="403" selection-end="403" vertical-scroll-proportion="0.16701902">
+          <folding />
         </state>
       </provider>
     </entry>

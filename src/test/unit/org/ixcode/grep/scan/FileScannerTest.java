@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.*;
 
 import static org.hamcrest.CoreMatchers.*;
+import static org.ixcode.grep.scan.PatternBasedFilenameFilter.*;
 import static org.junit.Assert.*;
 
 public class FileScannerTest {
@@ -22,7 +23,7 @@ public class FileScannerTest {
                                                 .withFile("foobarB.java")
                                                 .withSubDirectory(subDirectory);
 
-        FileScanner scanner = new FileScanner(rootDirectory, new PatternBasedFilenameFilter(new FilenamePattern("*.txt")));
+        FileScanner scanner = new FileScanner(rootDirectory, filterFilenamesBy("*.txt"));
 
         FileCounter fileCounter = new FileCounter();
 
