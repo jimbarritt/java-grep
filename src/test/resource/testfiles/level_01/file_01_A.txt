@@ -1,7 +1,7 @@
 // This is a todo file
 
 /**
- * @todo some java-doc type comments
+ * @TODO some java-doc type comments
  */
 Etiam semper neque pellentesque turpis ultricies faucibus.
 Phasellus tempus massa lacus, sed facilisis velit. Nunc sit amet justo sed diam laoreet interdum.
