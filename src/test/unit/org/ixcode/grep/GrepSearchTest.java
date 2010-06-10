@@ -7,7 +7,10 @@ import org.mockito.Mock;
 
 import java.util.*;
 
-import static org.hamcrest.core.Is.*;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
+import static org.hamcrest.core.IsSame.sameInstance;
 import static org.ixcode.grep.scan.FileScannerTest.*;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -49,6 +52,14 @@ public class GrepSearchTest {
         MatchedFile matchedFile = matchedFiles.get(0);
         assertThat(matchedFile.fileName(), is("file1"));
         assertThat(matchedFile.matchedLines().size(), is(1));
+    }
+
+    @Test
+    public void createsFileScanningAction() {
+        FileScanningAction fileScanningAction = grepSearch.fileScanningAction();
+
+        assertThat(fileScanningAction, not(nullValue()));
+        assertThat(fileScanningAction, is(sameInstance((FileScanningAction)grepSearch)));
     }
 
     private static MatcherResult matched() {

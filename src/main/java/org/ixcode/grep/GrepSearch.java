@@ -27,7 +27,7 @@ public class GrepSearch implements FileScanningAction {
     }
 
     public FileScanningAction fileScanningAction() {
-        return null;
+        return this;
     }
 
 }
