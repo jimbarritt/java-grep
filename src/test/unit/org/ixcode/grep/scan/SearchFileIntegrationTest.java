@@ -21,7 +21,7 @@ public class SearchFileIntegrationTest {
         assertThat(fileContents, is("haiku\ntwoline"));
     }
 
-    @Test(expected=RuntimeException.class)
+    @Test(expected=FileProcessingException.class)
     public void wrapsIoExceptions() {
         File file = new File("foomcbar");
 

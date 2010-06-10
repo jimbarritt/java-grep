@@ -32,9 +32,8 @@ public class SearchFile {
                 channel.close();
                 fis.close();
             }
-        }
-        catch (IOException e) {
-            throw new RuntimeException("Could not read file: " + delegate.getAbsolutePath() + " (See cause)", e);
+        } catch (IOException e) {
+            throw new FileProcessingException("Could not read file", delegate, e);
         }
 
         try {
