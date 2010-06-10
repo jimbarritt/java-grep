@@ -19,12 +19,16 @@ public class GrepIntegrationTest {
 
         assertThat(matchedFiles.size(), is(7));
 
+        log.info(printMatchedFiles(matchedFiles));
+    }
+
+    private static String printMatchedFiles(List<MatchedFile> matchedFiles) {
         StringBuilder sb = new StringBuilder();
         sb.append("Results of search:\n\n");
         for (MatchedFile matchedFile : matchedFiles) {
             sb.append(printFile(matchedFile));
         }
-        log.info(sb.toString());
+        return sb.toString();
     }
 
     private static String printFile(MatchedFile matchedFile) {
