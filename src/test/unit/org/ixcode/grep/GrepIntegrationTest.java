@@ -19,9 +19,8 @@ public class GrepIntegrationTest {
 
         assertThat(matchedFiles.size(), is(7));
 
-        log.info("Results of search:\n");
         StringBuilder sb = new StringBuilder();
-        sb.append("\n");
+        sb.append("Results of search:\n\n");
         for (MatchedFile matchedFile : matchedFiles) {
             sb.append(printFile(matchedFile));
         }
