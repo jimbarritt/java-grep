@@ -30,24 +30,44 @@ public class SearchFileIntegrationTest {
         searchFile.readFile();
     }
 
-    @Test(expected=RuntimeException.class)
+    @Test(expected=DecodingContentException.class)
     public void wrapsDecodingExceptions() throws Exception {
-        File f = createTempFile("fotler");
+        File tempFile = createTempFile("fotler");
+        tempFile.deleteOnExit();
 
-        String nonUtf8EncodedContents = "Some dodgy encoding £ sign always stuffs up utf8";
+        String content = "Some dodgy encoding £ sign always stuffs up utf8";
+        byte[] nonUtf8EncodedContents = content.getBytes(Charset.forName("windows-1252"));
 
-        FileOutputStream fos = new FileOutputStream(f);
-        fos.write(nonUtf8EncodedContents.getBytes(Charset.forName("foobar")));
+        FileOutputStream fos = new FileOutputStream(tempFile);
+        try {
+            fos.write(nonUtf8EncodedContents);
+            fos.flush();
+        } finally {
+            fos.close();
+        }
 
+        SearchFile searchFile = new SearchFile(tempFile);
+
+        searchFile.readFile();
 
     }
 
     private static File createTempFile(String fileName) throws IOException {
         File tempFile = File.createTempFile(fileName, "temp");
+        if (tempFile.exists()) {
+            deleteFile(tempFile);
+        }
         boolean success = tempFile.createNewFile();
         if (!success) {
             throw new RuntimeException("Could not create temp file " + tempFile.getAbsolutePath());            
         }
         return tempFile;
+    }
+
+    private static void deleteFile(File file) {
+        if (file.delete()) {
+            return;
+        }
+        throw new RuntimeException("Could not delete file: " + file.getAbsolutePath());
     }
 }

@@ -40,7 +40,7 @@ public class SearchFile {
         try {
             return UTF8_DECODER.decode(bb);
         } catch (CharacterCodingException e) {
-            throw new RuntimeException("COuld not decode contents of file: " + delegate.getAbsolutePath() + " in UTF8 (See cause)", e);
+            throw new DecodingContentException(delegate, "UTF8", e);
         }
     }
 }
