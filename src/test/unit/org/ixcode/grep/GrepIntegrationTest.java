@@ -18,7 +18,7 @@ public class GrepIntegrationTest {
         List<MatchedFile> matchedFiles = Grep.search("./src/test/resource/testfiles", "*.txt", "todo");
 
         assertThat(matchedFiles.size(), is(7));
-
+        
         log.info(printMatchedFiles(matchedFiles));
     }
 
