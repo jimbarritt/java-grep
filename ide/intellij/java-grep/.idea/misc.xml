@@ -13,7 +13,7 @@
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../../../../../../Desktop" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../../../../clients/trader/DealerWebsitesServer/target/intellij-coverage" />
   </component>
   <component name="FireworksProject">
     <option name="expectedTestCaseNameRegex" value="(.(?!Integration))*Test" />

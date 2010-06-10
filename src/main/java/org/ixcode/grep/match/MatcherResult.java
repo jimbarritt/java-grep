@@ -26,4 +26,8 @@ public class MatcherResult {
     public boolean matched() {
         return matchedLineCount() > 0;
     }
+
+    public List<MatchedLine> matchedLines() {
+        return matchedLines;
+    }
 }

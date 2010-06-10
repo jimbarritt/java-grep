@@ -16,7 +16,7 @@ public class MatchedLine {
         this.matchResult = matchResult;
     }
 
-    private List<MatchedGroup> extractGroups(MatchResult matchResult) {
+    private static List<MatchedGroup> extractGroups(MatchResult matchResult) {
         List<MatchedGroup> groups = new ArrayList<MatchedGroup>();
         for (int iGroup=1;iGroup<=matchResult.groupCount();++iGroup) {
             groups.add(new MatchedGroup(matchResult.group(iGroup), matchResult.start(iGroup), matchResult.end(iGroup)));

@@ -18,7 +18,7 @@ public class GrepSearch implements FileScanningAction {
     public void scanFile(SearchFile searchFile) {
         MatcherResult matcherResult = charSequenceMatcher.match(searchFile.readFile());
         if (matcherResult.matched()) {
-            matchedFiles.add(new MatchedFile());
+            matchedFiles.add(new MatchedFile(searchFile.toString(), matcherResult.matchedLines()));
         }
     }
 
