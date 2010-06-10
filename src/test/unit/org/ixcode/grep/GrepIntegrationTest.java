@@ -9,10 +9,9 @@ import static org.junit.Assert.*;
 
 public class GrepIntegrationTest {
 
-    @Test
-    @Ignore("Not ready for this yet:)")
+    @Test    
     public void grepsFiles() {
-        List<MatchedFile> matchedFiles = Grep.search("./src/test/resource/testfiles", "*.txt");
+        List<MatchedFile> matchedFiles = Grep.search("./src/test/resource/testfiles", "*.txt", "todo");
 
         assertThat(matchedFiles.size(), is(1));                
     }

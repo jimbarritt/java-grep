@@ -4,7 +4,7 @@ import org.apache.log4j.*;
 import org.junit.*;
 
 import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
+import static org.junit.Assert.*;
 
 
 public class FileScannerIntegrationTest {
@@ -17,7 +17,7 @@ public class FileScannerIntegrationTest {
         FileScannerTest.FileCounter fileCounter = new FileScannerTest.FileCounter();
         scanner.scan(fileCounter);
 
-        assertThat(fileCounter.fileCount(), is(7L));        
+        assertThat(fileCounter.fileCount(), is(8L));        
     }
 
 }

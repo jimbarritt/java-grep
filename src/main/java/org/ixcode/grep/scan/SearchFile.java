@@ -1,8 +1,15 @@
 package org.ixcode.grep.scan;
 
 import java.io.*;
+import java.nio.*;
+import java.nio.channels.*;
+import java.nio.charset.*;
 
 public class SearchFile {
+    private static Charset UTF8_CHARSET = Charset.forName("UTF-8");
+    private static CharsetDecoder UTF8_DECODER = UTF8_CHARSET.newDecoder();
+
+
     private final File delegate;
 
     public SearchFile(File delegate) {
@@ -14,6 +21,26 @@ public class SearchFile {
     }
 
     public CharSequence readFile() {
-        return null;
+        MappedByteBuffer bb = null;
+        try {
+            FileInputStream fis = new FileInputStream(delegate);
+            FileChannel channel = fis.getChannel();            
+            try {
+                int sz = (int) channel.size();
+                bb = channel.map(FileChannel.MapMode.READ_ONLY, 0, sz);
+            } finally {
+                channel.close();
+                fis.close();
+            }
+        }
+        catch (IOException e) {
+            throw new RuntimeException("Could not read file: " + delegate.getAbsolutePath() + " (See cause)", e);
+        }
+
+        try {
+            return UTF8_DECODER.decode(bb);
+        } catch (CharacterCodingException e) {
+            throw new RuntimeException("COuld not decode contents of file: " + delegate.getAbsolutePath() + " in UTF8 (See cause)", e);
+        }
     }
 }
