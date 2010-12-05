@@ -18,7 +18,9 @@ public class Grep {
     }
 
     public static List<MatchedFile> search(String rootDirectoryPath, String filenamePattern, String searchExpression) {
-        Grep grep = new Grep(new FileScanner(new SearchDirectory(rootDirectoryPath), new PatternBasedFilenameFilter(new FilenamePattern(filenamePattern))));
+        Grep grep = new Grep(new FileScanner(new SearchDirectory(rootDirectoryPath),
+                                             new PatternBasedFilenameFilter(new FilenamePattern(filenamePattern))));
+
         return grep.searchFor(new GrepSearch(new CharSequenceMatcher(searchExpression)));
     }
 }

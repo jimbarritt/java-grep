@@ -11,14 +11,14 @@ public class MatchedLine {
 
     public MatchedLine(int lineNumber, CharSequence line, MatchResult matchResult) {
         this.lineNumber = lineNumber;
-        this.line = line;        
+        this.line = line;
         this.groups = extractGroups(matchResult);
         this.matchResult = matchResult;
     }
 
     private static List<MatchedGroup> extractGroups(MatchResult matchResult) {
         List<MatchedGroup> groups = new ArrayList<MatchedGroup>();
-        for (int iGroup=1;iGroup<=matchResult.groupCount();++iGroup) {
+        for (int iGroup = 1; iGroup <= matchResult.groupCount(); ++iGroup) {
             groups.add(new MatchedGroup(matchResult.group(iGroup), matchResult.start(iGroup), matchResult.end(iGroup)));
         }
         return groups;

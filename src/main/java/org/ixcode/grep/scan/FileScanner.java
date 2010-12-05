@@ -22,7 +22,7 @@ public class FileScanner {
         scanFiles(rootDir, filenameFilter, fileScanningAction);
     }
 
-    private void scanFiles(SearchDirectory parentDir, FilenameFilter filter, FileScanningAction fileScanningAction) {
+    private static void scanFiles(SearchDirectory parentDir, FilenameFilter filter, FileScanningAction fileScanningAction) {
         List<SearchFile> files = parentDir.listFiles(filter);
         if (files != null) {
             for (SearchFile file : files) {
