@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="ixcode.java-grep" default="pre-checkin" basedir=".">
+
+	<description>
+        Standard ant build for java-grep project
+        (c) Jim Barritt 2010
+    </description>
+
+    <property name="module.dir" value="${basedir}" />
+
+    <property name="src.dir" value="${module.dir}/src"/>
+    <property name="src.main.dir" value="${src.dir}/main"/>
+    <property name="src.main.java.dir" value="${src.main.dir}/java"/>
+    <property name="src.test.dir" value="${src.dir}/test"/>
+    <property name="src.test.unit.dir" value="${src.test.dir}/unit"/>
+
+    <property name="lib.dir" value="${module.dir}/lib"/>
+    <property name="lib.development.dir" value="${lib.dir}/development"/>
+    <property name="lib.production.dir" value="${lib.dir}/production"/>
+
+    <property name="target.dir" value="${module.dir}/target"/>
+
+    <property name="target.compile.dir" value="${target.dir}/compilation"/>
+    <property name="target.compile.classes.dir" value="${target.compile.dir}/classes"/>
+    <property name="target.compile.classes.production.dir" value="${target.compile.classes.dir}/production" />
+    <property name="target.compile.classes.test.unit.dir" value="${target.compile.classes.dir}/test/unit" />
+
+
+    <property name="target.metrics.dir" value="${target.dir}/metrics"/>
+    <property name="target.metrics.coverage.dir" value="${target.metrics.dir}/coverage"/>
+
+    <property name="target.metrics.coverage.cobertura.dir" value="${target.metrics.coverage.dir}/cobertura"/>
+    <property name="target.metrics.coverage.cobertura.instrumented.dir" value="${target.metrics.coverage.cobertura.dir}/instrumented"/>
+    <property name="target.metrics.coverage.cobertura.coverage.dir" value="${target.metrics.coverage.cobertura.dir}/coverage"/>
+    <property name="target.metrics.coverage.cobertura.coverage.xml.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/xml"/>
+    <property name="target.metrics.coverage.cobertura.coverage.summary.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/summary"/>
+    <property name="target.metrics.coverage.cobertura.coverage.html.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/html"/>
+    <property name="target.metrics.coverage.cobertura.reports.dir" value="${target.metrics.coverage.cobertura.dir}/reports"/>
+    <property name="target.metrics.coverage.cobertura.reports.xml.dir" value="${target.metrics.coverage.cobertura.reports.dir}/xml"/>
+    <property name="target.metrics.coverage.cobertura.reports.html.dir" value="${target.metrics.coverage.cobertura.reports.dir}/html"/>
+
+    <path id="production.classpath">
+		<fileset dir="${lib.production.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+    
+    <path id="development.classpath">
+		<fileset dir="${lib.development.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+        <path refid="production.classpath" />
+	</path>
+
+    <path id="test.unit.classpath">
+        <path refid="development.classpath" />
+		<fileset dir="${lib.development.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+
+
+	<path id="cobertura.classpath">
+		<path refid="production.classpath" />
+	</path>
+
+	<taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+
+    <target name="init" depends="clean">
+        <mkdir dir="${target.dir}" />
+        <mkdir dir="${target.compile.classes.production.dir}" />
+        <mkdir dir="${target.compile.classes.test.unit.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.instrumented.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.reports.xml.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.reports.html.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.coverage.xml.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.coverage.summary.dir}" />
+		<mkdir dir="${target.metrics.coverage.cobertura.coverage.html.dir}" />
+	</target>
+
+
+    <target name="coverage" depends="compile.production,
+                                     instrument,
+                                     compile.test.unit,
+                                     test,
+                                     coverage-report,
+                                     summary-coverage-report,
+                                     alternate-coverage-report"
+            description="Compile, instrument production classes, run the tests and generate coverage reports."/>
+
+	<target name="compile.production" depends="init">
+		<javac srcdir="${src.main.java.dir}" destdir="${target.compile.classes.production.dir}" debug="yes">
+			<classpath refid="development.classpath" />
+		</javac>
+	</target>
+
+    <target name="compile.test.unit">
+        <javac srcdir="${src.test.unit.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
+			<classpath refid="development.classpath" />
+		</javac>
+    </target>
+
+	<target name="instrument">
+		<cobertura-instrument todir="${target.metrics.coverage.cobertura.instrumented.dir}">
+
+			<ignore regex="org.apache.log4j.*" />
+
+			<fileset dir="${target.compile.classes.test.unit.dir}">
+				<include name="**/*.class" />
+			</fileset>
+		</cobertura-instrument>
+	</target>
+
+	<target name="test">
+		<junit fork="yes" dir="${basedir}" failureProperty="test.failed">
+			<!--
+				Note the classpath order: instrumented classes are before the
+				original (uninstrumented) classes.  This is important.
+			-->
+			<classpath location="${target.metrics.coverage.cobertura.instrumented.dir}" />
+			<classpath location="${target.compile.classes.development.dir}" />
+
+			<!--
+				The instrumented classes reference classes used by the
+				Cobertura runtime, so Cobertura and its dependencies
+				must be on your classpath.
+			-->
+			<classpath refid="cobertura.classpath" />
+
+			<formatter type="xml" />
+			<test name="${testcase}" todir="${target.metrics.coverage.cobertura.reports.xml.dir}" if="testcase" />
+			<batchtest todir="${target.metrics.coverage.cobertura.reports.xml.dir}" unless="testcase">
+				<fileset dir="${src.dir}">
+					<include name="**/*Test.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+
+		<junitreport todir="${target.metrics.coverage.cobertura.reports.xml.dir}">
+			<fileset dir="${target.metrics.coverage.cobertura.reports.xml.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${target.metrics.coverage.cobertura.reports.html.dir}" />
+		</junitreport>
+	</target>
+
+	<target name="coverage-check">
+		<cobertura-check branchrate="34" totallinerate="100" />
+	</target>
+
+	<target name="coverage-report">
+		<!--
+			Generate an XML file containing the coverage data using
+			the "srcdir" attribute.
+		-->
+		<cobertura-report srcdir="${src.dir}" destdir="${target.metrics.coverage.cobertura.coverage.xml.dir}" format="xml" />
+	</target>
+
+	<target name="summary-coverage-report">
+		<!--
+			Generate an summary XML file containing the coverage data using
+			the "srcdir" attribute.
+		-->
+		<cobertura-report srcdir="${src.dir}" destdir="${target.metrics.coverage.cobertura.coverage.summary.dir}" format="summaryXml" />
+	</target>
+
+	<target name="alternate-coverage-report">
+		<!--
+			Generate a series of HTML files containing the coverage
+			data in a user-readable form using nested source filesets.
+		-->
+		<cobertura-report destdir="${target.metrics.coverage.cobertura.coverage.html.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+			</fileset>
+		</cobertura-report>
+	</target>
+
+	<target name="clean" description="Remove all files created by the build/test process.">
+		<delete dir="${target.dir}" />
+	</target>
+
+
+</project>
